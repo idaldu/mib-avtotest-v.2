@@ -1,20 +1,12 @@
-from selenium.webdriver.common.by import By
+import time
 
-from pages.base_page import BasePage
+from pages.login_page import AuthPage
 
 
-def test_basic(driver):
-    WAIT_SEC = 10
-    driver.implicitly_wait(WAIT_SEC)
-    base = BasePage(driver)
-    element = (By.XPATH, '//android.view.View[@content-desc="Войти"]')
-    base.click(element)
+class TestElement:
+    class TestEnterBox:
 
-# from selenium.webdriver.common.by import By
-# from pages.base_page import BasePage
-#
-#
-# class ElementsTest(BasePage):
-#     def test(self):
-#         element = (By.XPATH, '//android.view.View[@content-desc="Войти"]')
-#         self.click(self, element)
+        def test_enter_box(self, driver):
+            test_enter_box = AuthPage(driver)
+
+            test_enter_box.click_button_enter()

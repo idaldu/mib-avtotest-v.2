@@ -12,7 +12,7 @@ def driver():
             "deviceName": "Redmi",
             "app": "C:\\Users\\adubov\\PycharmProjects\\mib-avtotest-v.2\\app_binaries\\mib-test.apk"
         })
-
+    driver.implicitly_wait(10)
     yield driver  # Test code runs after this line
 
     # Teardown
