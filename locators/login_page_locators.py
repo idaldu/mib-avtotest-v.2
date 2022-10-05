@@ -1,3 +1,5 @@
+from data.data import Person
+
 class AuthLocators:
     ENTER_BUTTON = '//android.view.View[@content-desc="Войти"]'
     TELEPHONE_INPUT = '//android.widget.EditText[@index=3]'
@@ -7,3 +9,6 @@ class AuthLocators:
     SMS_TEXT = '//android.widget.TextView[contains(@text, "Внимание!")]'
     SMS_CONFIRM = '//android.view.View[@content-desc="Подтвердить"]'
     SMS_CONFIRM_BUTTON = '//android.view.View[@content-desc="СМС подтверждение"]'
+    PUSH_CONFIRM_BUTTON = '(//android.view.View[@content-desc="Включить уведомления"])[2]'
+    USER_NAME = f'//android.view.View[@content-desc="{Person.user_name}"]'
+    # NOTIFICATION_BUTTON = 'open_notification_screen'

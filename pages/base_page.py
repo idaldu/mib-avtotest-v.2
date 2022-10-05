@@ -1,5 +1,5 @@
 from selenium.webdriver.common.by import By
-
+# from appium_flutter_finder.flutter_finder import FlutterElement, FlutterFinder
 
 class BasePage:
     def __init__(self, driver):
@@ -32,6 +32,16 @@ class BasePage:
         actions.w3c_actions.pointer_action.move_to_location(500, 1300)
         actions.w3c_actions.pointer_action.release()
         actions.perform()
+
+    def output(self, locator):
+        el = self.find_element(locator).text
+        return el
+
+    # def click_flutter(self, locator):
+    #     finder = FlutterFinder()
+    #     key_finder = finder.by_value_key(locator)
+    #     el = FlutterElement(driver, key_finder)
+    #     el.click()
 
    # def wait(self, time):
    #     self.driver.implicitly_wait(time)
